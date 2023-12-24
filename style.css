@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+  background-color: gold;
+  color: whitesmoke;
+}
+
+header {
+  padding: 15px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 36px;
+}
+
+.search-wrapper {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 10px solid white;
+
+}
+
+#searchForm {
+  width: 75%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  outline: 0;
+}
+
+.result {
+  padding: 15px;
+}
+
+
+.result-wrapper {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 250px 250px; */
+}
+
+#today {
+  grid-column: 1 / 3;
+}
+
+.outlook {
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 15px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  text-align: center;
+  gap: 15px;
+  justify-items: center;
+}
+
+.current {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.summary p {
+  padding: 15px;
+  font-weight: 600;
+}
+
+table {
+  padding: 10px;
+  /* display: block; */
+  width: 100%;
+  border-collapse: collapse;
+  background-color: orangered;
+}
+table th {
+  text-align: left;
+  width: 25%;
+  padding: 5px;
+}
+
+tr {
+  /* margin: 5px; */
+  border-bottom: 2px solid white;
+  /* display: grid; */
+  /* grid-template-columns: 200px 1fr; */
+  /* gap: 15px; */
+}
+
+table td {
+  padding: 10px;
+  /* display: block; */
+  /* flex-grow: 1; */
+  background-color: rebeccapurple;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  /* background-color: white; */
+  border-radius: 50%;
+  border: 10px solid grey;
+
+  border-top-color: greenyellow;
+  border-bottom-color: yellow;
+
+  animation: loading 750ms;
+}
+
+@keyframes loading {
+  50% {
+    transform: rotate(1turn);
+  }
+}
